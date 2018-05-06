@@ -63,6 +63,14 @@ To update the checksums, do:
 $ sudo port -v extract noah
 ```
 
+Do a Portfile lint:
+
+```console
+$ port lint --nitpick
+```
+
+Fix any inconsisitencies.
+
 ## Source Structure
 
 Sources are placed in the following rules:
