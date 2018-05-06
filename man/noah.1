@@ -3,7 +3,7 @@
 \fBnoah\fR - Linux ABI implementation (aka Execution Flavour) for OSX
 .SH "SYNOPSIS"
 .P
-\fBnoah\fR \fB-h\fR | \fB\fI-o output_file\fR\fR \[lB]\fI-w warning_file\fR\[rB] \[lB]\fI-s strace_file\fR\[rB] \fB-m /virtual/filesystem/root\fR \fBprogram\fR \[lB]\fI...\fR\[rB]
+\fBnoah\fR \fB-h\fR | \[lB]\fI-o output_file\fR\[rB] \[lB]\fI-w warning_file\fR\[rB] \[lB]\fI-s strace_file\fR\[rB] \fB-m /virtual/filesystem/root\fR \fBprogram\fR \[lB]\fI...\fR\[rB]
 .SH "DESCRIPTION"
 .P
 Noah implements Linux Application Binary Interface (ABI) for OSX through its Hypervisor Framework based on Intel(R) VTX technology.
@@ -23,7 +23,7 @@ On the first invocation the script uses noahstrap(1) to populate this virtual ro
 .P
  \fI-m /virtual/filesystem/root\fR, \fI--mnt /virtual/filesystem/root\fR mandatory, specifies the virtual filesystem root where the target application, as well as the ELF interpreter and the rest of dynamic libraries reside.
 .P
- \fIprogram\fR the target program within the virtual FS root.
+ \fIprogram\fR the target program within the virtual filesystem root, and its arguments, if any.
 .SH "FILES"
 .P
  \fI~/.noah/tree\fR
@@ -35,6 +35,8 @@ Default virtual filesystem root.
 .RE
 .SH "REFERENCES:"
 .RS 0
+.IP \(bu 4
+\fBNoah hacking\fR \fI\(lahttps://github.com/noah-linux/noah/HACKING.md\(ra\fR
 .IP \(bu 4
 \fBxhyve\fR \fI\(lahttps://github.com/mist64/xhyve\(ra\fR
 .IP \(bu 4

@@ -3,9 +3,10 @@
 PortSystem              1.0
 PortGroup               GitHub 1.0
 
-github.setup            linux-noah noah 0.5.1 
+github.setup            linux-noah noah 0.5.1
 
 PortGroup               cmake 1.0
+
 cmake.out_of_source     yes
 
 categories              emulators

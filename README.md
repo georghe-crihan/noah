@@ -16,15 +16,15 @@ $ brew install linux-noah/noah/noah
 $ noah
 ```
 ### Macports
-First, install a local portfile (see the [macports guide](https://guide.macports.org/chunked/development.local-repositories.html)).
 
 ```console
-$ mkdir -p ${LOCAL_MACPORTS_ROOT}/emulators/noah
-$ cp Portfile ${LOCAL_MACPORTS_ROOT}/emulators/noah
-$ (cd ${LOCAL_MACPORTS_ROOT}; portindex)
 $ sudo port install noah
 $ noah
 ```
+
+## Manpage
+
+See [man/noah.md](man/noah.md).
 
 ## Hacking
 

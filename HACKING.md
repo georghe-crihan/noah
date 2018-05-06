@@ -37,6 +37,32 @@ The second option is to use _meta-strace_. Because we still don't have implement
 
 The third option is to use the _output_ option. This is mere debug logs that are emit using the `printk` function in noah's source codes. This feature is enabled with `--output OUTFILE` option.
 
+## Port file maintenance
+
+Before submitting to [macports](https://github.com/macports/macports-ports)
+it's a good idea to check the Portfile locally.
+
+First, install a local port repository (see the
+[macports guide](https://guide.macports.org/chunked/development.local-repositories.html)).
+
+Then
+
+```console
+$ mkdir -p ${LOCAL_MACPORTS_ROOT}/emulators/noah
+$ cp Portfile ${LOCAL_MACPORTS_ROOT}/emulators/noah
+$ (cd ${LOCAL_MACPORTS_ROOT}; portindex)
+$ sudo port install noah
+$ noah
+```
+
+Make sure to update the Portfile version.
+
+To update the checksums, do:
+
+```console
+$ sudo port -v extract noah
+```
+
 ## Source Structure
 
 Sources are placed in the following rules:

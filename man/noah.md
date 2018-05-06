@@ -2,7 +2,7 @@
 
 ## SYNOPSIS
 
-`noah` `-h` \| [_-o output_file_] \[_-w warning_file_] \[_-s strace_file_] `-m /virtual/filesystem/root` `program` \[_..._]
+`noah` `-h` \| \[_-o output_file_] \[_-w warning_file_] \[_-s strace_file_] `-m /virtual/filesystem/root` `program` \[_..._]
 
 ## DESCRIPTION
 
@@ -27,11 +27,13 @@ root with a default Ubuntu suite, see noahstrap-suites(1).
 
   _-s file_, _--strace file_ optional, specifies the strace capture file.
 
-  _-m /virtual/filesystem/root_, _--mnt /virtual/filesystem/root_ mandatory, specifies the virtual filesystem root where the target
+  _-m /virtual/filesystem/root_, _--mnt /virtual/filesystem/root_ mandatory,
+  specifies the virtual filesystem root where the target
   application, as well as the ELF interpreter and the rest of dynamic libraries
   reside.
 
-  _program_ the target program within the virtual filesystem root.
+  _program_ the target program within the virtual filesystem root, and its
+  arguments, if any.
 
 ## FILES
 
@@ -41,6 +43,7 @@ root with a default Ubuntu suite, see noahstrap-suites(1).
 
 ## REFERENCES:
 
+- [Noah hacking](https://github.com/noah-linux/noah/HACKING.md)
 - [xhyve](https://github.com/mist64/xhyve)
 - [Linux Darling project](http://www.darlinghq.org/source-code/)
 - [FreeBSD Linuxolator aka Linux ABI](https://www.freebsd.org/doc/handbook/linuxemu-advanced.html)
